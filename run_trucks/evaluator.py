@@ -57,9 +57,9 @@ class Evaluator:
 
 	def get_violation(self, sol):
 
-		year = np.zeros(self._tontarget.shape[0])
+		years = np.zeros(self._tontarget.shape[0])
 		violation = 0.0
-		for i in range(self._tontarget.shape[0]):
+		for i in range(self._tontarget.shape[0], 2):
 			year[i] = (
 					sol[i * 2] * self._capacity[i * 2] +
 					sol[i * 2 + 1] * self._capacity[i * 2 + 1]
@@ -71,7 +71,7 @@ class Evaluator:
 				else:
 					violation += (self._tontarget[i] - year[i])
 
-		if np.any(year < 0):
+		if np.any(years < 0):
 			raise Exception("Invalid constraint detected...")
 
 		return violation
