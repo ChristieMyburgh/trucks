@@ -1,0 +1,39 @@
+# Crossover probability - this can mostly be left at the default value.
+x_prob,.98
+# Mutation probability - this can mostly be left at the default value.
+m_prob,.15
+# Population size - usually the more variables the larger the population.
+pop_size,200
+# Maximum allowed populations.
+max_gen,200
+# Number of successive no-improvement generations before convergence.
+no_improvement,5
+# Proportion by which nadir point will be swelled - leave at default.
+nadir_swell,1.01
+# Proportion by which hypervolume will be swelled - leave at default.
+hv_swell,.01
+# Frequency of nadir point apdates - leave at default.
+nadir_freq,5
+# Sensitivity of convergence to hypervolume changes - leave at default.
+converge_sensitivity,0.01
+# Ensure that these limits correspond with the Spawn Module
+# Lower limits of variables - separate limits with ':'
+var_lower,0: 0: 0: 0: 0: 0: 0: 0
+# Upper limits of variables - separate limits with ':'
+var_upper,40: 40: 40: 40: 40: 40: 40: 40
+# Peakedness of crossover distribution - control spread of offspring around parents.
+eta_c,2.0
+# Peakedness of mutation distribution - control spread of offspring around parent.
+eta_m,2.0
+# Number of function evaluations allowed.
+num_hifid,150
+# Should reference vectors be dynamic or static - usually dynamic in constrained problems.
+is_adaptive_refs,False
+# Generation at which reference vectors should start.
+adapt_gen,1500
+# Number of gaps per objective - H = (p+1) choose p, where p is number of gaps.
+num_gaps,12
+# Constants used in automatic calculations of population size.
+k0,30
+k1,5
+k2,2
